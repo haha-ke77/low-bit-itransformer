@@ -1,0 +1,21 @@
+python run.py \
+  --is_training 1 \
+  --model iTransformer \
+  --model_id weather_96_QiTrans_W4A4 \
+  --data custom \
+  --root_path ./data/weather/ \
+  --data_path weather.csv \
+  --features M \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 96 \
+  --batch_size 16 \
+  --e_layers 2 \
+  --d_model 512 \
+  --d_ff 2048 \
+  --n_heads 2 \
+  --attn_bits 4 \
+  --ffn_bits 4 \
+  --teacher_path /path/to/your/fp32_teacher_checkpoint.pth \
+  --checkpoints ./checkpoints/weather_QiTrans_96 \
+  --itr 1

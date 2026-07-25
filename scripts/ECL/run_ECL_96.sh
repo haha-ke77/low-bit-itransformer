@@ -1,0 +1,21 @@
+python run.py \
+  --is_training 1 \
+  --model iTransformer \
+  --model_id ECL_96 \
+  --data custom \
+  --root_path ./dataset/electricity/ \
+  --data_path electricity.csv \
+  --features M \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 96 \
+  --batch_size 8 \
+  --e_layers 2 \
+  --d_model 512 \
+  --d_ff 2048 \
+  --n_heads 2 \
+  --attn_bits 4 \
+  --ffn_bits 4 \
+  --itr 1 \
+  --teacher_path /path/to/your/fp32_teacher_checkpoint.pth \
+  --checkpoints ./checkpoints/ECL_box_96
